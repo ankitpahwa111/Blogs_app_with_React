@@ -3,11 +3,6 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-// let HomeName = () => {
-//     return (
-//         <span className='center'>POSTS : </span>
-//     )
-// }
 
 let arr=[];
 class Home extends Component {
@@ -54,7 +49,7 @@ class Home extends Component {
         })
         return (
             <div className="center" >
-                {/* <span className='center'>POSTS : </span> */}
+               
                 POSTS:
             {posts}
             </div>
@@ -73,9 +68,7 @@ const mapStateToProps = (state) => {
 }
 const mapDispathToProps = (dispatch) => {
     return {
-        // DeletePost: (id) => {
-        //     dispatch({type: 'DELETE_POST' , id:id})
-        // }
+        
         UpdateState : (arr)=>{
             console.log(arr);
             dispatch({type : 'NewPosts' , posts : arr})
